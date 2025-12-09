@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Name: Bryan Burke
+    Date Created: 2025-12-03
+    Date Modified: 2025-12-08
+-->
+
+    <!-- ==========================
+         METADATA & PAGE SETTINGS
+         ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technology R Us – Your friendly neighborhood tech shop offering repairs, upgrades, and gadgets.">
+    <meta name="author" content="Bryan Burke">
+    <meta name="date-produced" content="2025-12-03">
+    <meta name="date-tested" content="2025-12-08">
+
+    <title>Technology R Us – Home</title>
+
+    <!-- ==========================
+         STYLESHEETS
+         ========================== -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/print.css" media="print">
+
+    <!-- SlickNav CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- SlickNav JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+
+</head>
+<body>
+
+<!-- ==========================
+     HEADER + NAVIGATION
+     ========================== -->
+<header>
+    <div class="logo">Technology R Us</div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul id="main-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="promotions.html">Promotions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ==========================
+     HERO SECTION
+     ========================== -->
+<section class="hero">
+    <h1>Welcome to Technology R Us</h1>
+    <p>Your friendly neighborhood tech shop—repairs, upgrades, and gadgets you can trust.</p>
+
+    <div class="cta-buttons">
+        <a href="services.html" class="cta">Book a Repair</a>
+        <a href="products.html" class="cta">Shop Featured</a>
+        <a href="contact.html" class="cta">Request a Quote</a>
+    </div>
+</section>
+
+<!-- ==========================
+     FEATURED PRODUCTS
+     ========================== -->
+<section class="featured">
+    <h2>Featured Products & Promotions</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="../images/gaming-laptop.jpg" alt="Gaming Laptop">
+            <h3>Gaming Laptop Upgrade Kit</h3>
+            <p>Boost your system with more RAM and SSD storage.</p>
+            <p><strong>Price:</strong> $249.99</p>
+        </div>
+
+        <div class="product-card">
+            <img src="../images/raspberry-pi.jpg" alt="Raspberry Pi Starter Bundle">
+            <h3>Raspberry Pi Starter Bundle</h3>
+            <p>Perfect for learning, tinkering, or small DIY projects.</p>
+            <p><strong>Price:</strong> $99.99</p>
+        </div>
+
+        <div class="product-card">
+            <img src="../images/console-accessory.jpg" alt="Console Accessories">
+            <h3>Console Accessories Pack</h3>
+            <p>Controllers, cables, and protective cases for your gaming console.</p>
+            <p><strong>Price:</strong> $59.99</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================
+     COMMENTS SECTION
+     ========================== -->
+<section class="comments">
+    <h2>Comments</h2>
+    <form class="comment-form">
+        <input type="text" placeholder="Your Name">
+        <textarea placeholder="Write your comment here..."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<section class="comment-section" style="max-width:500px; margin:30px auto;">
+    <h2 style="font-size:1.3rem; margin-bottom:10px; text-align:center;">Leave a Comment</h2>
+
+    <form class="comment-form" action="comments-submitted.html" method="get" 
+          style="gap:10px;">
+
+        <input type="text" name="name" placeholder="Name" required 
+               style="padding:8px;">
+
+        <input type="email" name="email" placeholder="Email" required 
+               style="padding:8px;">
+
+        <textarea name="comment" rows="3" placeholder="Your comment..." required 
+                  style="padding:8px;"></textarea>
+
+        <div style="display:flex; gap:8px;">
+            <button type="submit" style="padding:8px;">Submit</button>
+            <button type="reset" style="padding:8px;">Reset</button>
+        </div>
+
+    </form>
+</section>
+
+<!-- ==========================
+     FOOTER
+     ========================== -->
+<footer>
+    <p>&copy; 2025 Technology R Us — Friendly neighborhood tech support</p>
+</footer>
+
+<!-- ==========================
+     SLICKNAV INITIALIZATION
+     ========================== -->
+<script>
+$(document).ready(function(){
+    $('#main-menu').slicknav({
+        prependTo: 'header',
+        label: '',        // no label, just hamburger icon
+        closeOnClick: true
+    });
+});
+</script>
+
+</body>
+</html>

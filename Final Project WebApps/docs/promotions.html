@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Name: Bryan Burke
+    Date Created: 2025-12-04
+    Date Modified: 2025-12-08
+-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Technology R Us – Special discounts, deals, and promotions on computer parts and services.">
+    <meta name="author" content="Bryan Burke">
+    <meta name="date-produced" content="2025-12-03">
+    <meta name="date-tested" content="2025-12-08">
+
+    <title>Technology R Us – Promotions</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <!-- jQuery & SlickNav -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#menu').slicknav({
+                prependTo: 'header',
+                label: '',
+                closeOnClick: true
+            });
+        });
+    </script>
+</head>
+
+<body class="promotions-page">
+
+<!-- HEADER -->
+<header>
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="Technology R Us Logo" class="logo-img">
+        <div class="logo-text">Technology R Us</div>
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="promotions.html" class="active">Promotions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Special Deals & Promotions</h1>
+    <p>Save big on tech repairs, upgrades, hardware, and accessories. Limited-time offers!</p>
+</section>
+
+<!-- PROMO BANNER -->
+<section class="promo-banner">
+    <div class="promo-content">
+        <h2>🔥 Winter Savings Event!</h2>
+        <p>Get up to <strong>30% OFF</strong> repairs and upgrades this month only.</p>
+    </div>
+</section>
+
+<!-- PROMOTIONS GRID -->
+<section class="page-content">
+    <div class="container">
+
+        <h2 class="section-title">Current Promotions</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <h3>20% Off Console Repairs</h3>
+                <p>Get your PlayStation, Xbox, or Nintendo console running like new.</p>
+                <p><strong>Valid Until:</strong> Dec 31, 2025</p>
+            </div>
+
+            <div class="product-card">
+                <h3>Laptop Upgrade Special</h3>
+                <p>Save 15% on RAM and SSD upgrades for all laptops.</p>
+                <p><strong>Valid Until:</strong> Jan 15, 2026</p>
+            </div>
+
+            <div class="product-card">
+                <h3>Gaming Gear Bundle</h3>
+                <p>Buy any gaming mouse and get a keyboard for 50% off.</p>
+                <p><strong>Limited Stock!</strong></p>
+            </div>
+
+            <div class="product-card">
+                <h3>Free Diagnostics</h3>
+                <p>Bring your device in for a free 15-minute diagnostic check.</p>
+                <p><strong>Every Friday & Saturday</strong></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- UPCOMING EVENTS SECTION -->
+<section class="upcoming-events">
+    <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+
+        <div class="events-container">
+
+            <!-- Card Game Event -->
+            <div class="event-card">
+                <h3>Trading Card Game Tournament</h3>
+                <p>Join us for a fun and competitive trading card game tournament featuring Pokémon, Magic: The Gathering, and Yu-Gi-Oh!</p>
+                <p><strong>Date:</strong> January 20, 2026</p>
+                <p><strong>Entry Fee:</strong> $5</p>
+                <p><strong>Prizes:</strong> Booster packs + store credit</p>
+            </div>
+
+            <!-- Tech Workshop -->
+            <div class="event-card">
+                <h3>Hands-On PC Building Workshop</h3>
+                <p>Learn how to build your own PC from scratch with guidance from our in-store technicians.</p>
+                <p><strong>Date:</strong> February 12, 2026</p>
+                <p><strong>Cost:</strong> Free</p>
+                <p><strong>Limited Seats:</strong> 15 spots</p>
+            </div>
+
+            <!-- Kids Coding Event -->
+            <div class="event-card">
+                <h3>Kids Coding Club</h3>
+                <p>A beginner-friendly coding event using Scratch and Raspberry Pi to teach programming fundamentals.</p>
+                <p><strong>Date:</strong> March 5, 2026</p>
+                <p><strong>Ages:</strong> 8–14</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="comment-section" style="max-width:500px; margin:30px auto;">
+    <h2 style="font-size:1.3rem; margin-bottom:10px; text-align:center;">Leave a Comment</h2>
+
+    <form class="comment-form" action="comments-submitted.html" method="get" 
+          style="gap:10px;">
+
+        <input type="text" name="name" placeholder="Name" required 
+               style="padding:8px;">
+
+        <input type="email" name="email" placeholder="Email" required 
+               style="padding:8px;">
+
+        <textarea name="comment" rows="3" placeholder="Your comment..." required 
+                  style="padding:8px;"></textarea>
+
+        <div style="display:flex; gap:8px;">
+            <button type="submit" style="padding:8px;">Submit</button>
+            <button type="reset" style="padding:8px;">Reset</button>
+        </div>
+
+    </form>
+</section>
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Technology R Us — Friendly neighborhood tech support</p>
+</footer>
+
+</body>
+</html>

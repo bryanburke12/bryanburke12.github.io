@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Name: Bryan Burke
+    Date Created: 2025-12-08
+    Date Modified: 2025-12-08
+-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Technology R Us – Feedback submission results.">
+    <meta name="author" content="Bryan Burke">
+    <meta name="date-produced" content="2025-12-03">
+    <meta name="date-tested" content="2025-12-08">
+
+    <title>Technology R Us – Feedback Submitted</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <!-- jQuery & SlickNav -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Technology R Us</div>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="promotions.html">Promotions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+$(document).ready(function(){
+    $('#menu').slicknav({
+        prependTo: 'header',
+        label: '',
+        duration: 250,
+        closeOnClick: true
+    });
+});
+</script>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Feedback Submitted</h1>
+    <p>Thank you! Here’s what you submitted:</p>
+</section>
+
+<!-- RESULTS -->
+<section class="page-content">
+    <div class="feedback-results-container" style="display:flex; flex-direction:column; gap:20px; max-width:600px; margin:auto;">
+
+        <ul class="feedback-results" style="list-style:none; padding:0; border:1px solid #ddd; border-radius:8px; padding:20px; background:#f9f9f9;">
+            <li><strong>First Name:</strong> <span id="firstName"></span></li>
+            <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+            <li><strong>Email:</strong> <span id="email"></span></li>
+            <li><strong>Comments:</strong> <span id="comments"></span></li>
+        </ul>
+
+        <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+            <a href="feedback.html" class="cta-button" style="flex:1; min-width:150px;">Submit Another Feedback</a>
+            <a href="index.html" class="cta-button" style="flex:1; min-width:150px;">Back to Home</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Get data from URL
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('firstName').textContent = params.get('firstName') || '';
+    document.getElementById('lastName').textContent = params.get('lastName') || '';
+    document.getElementById('email').textContent = params.get('email') || '';
+    document.getElementById('comments').textContent = params.get('comments') || '';
+</script>
+
+<section class="comment-section" style="max-width:500px; margin:30px auto;">
+    <h2 style="font-size:1.3rem; margin-bottom:10px; text-align:center;">Leave a Comment</h2>
+
+    <form class="comment-form" action="comments-submitted.html" method="get" 
+          style="gap:10px;">
+
+        <input type="text" name="name" placeholder="Name" required 
+               style="padding:8px;">
+
+        <input type="email" name="email" placeholder="Email" required 
+               style="padding:8px;">
+
+        <textarea name="comment" rows="3" placeholder="Your comment..." required 
+                  style="padding:8px;"></textarea>
+
+        <div style="display:flex; gap:8px;">
+            <button type="submit" style="padding:8px;">Submit</button>
+            <button type="reset" style="padding:8px;">Reset</button>
+        </div>
+
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Technology R Us — Friendly neighborhood tech support</p>
+</footer>
+
+</body>
+</html>
