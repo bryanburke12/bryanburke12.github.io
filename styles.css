@@ -1,0 +1,466 @@
+/* ==========================
+   GOOGLE FONT IMPORT
+   ========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================
+   GENERAL RESET
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================
+   HEADER
+   ========================== */
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    opacity: 0.7;
+}
+
+/* ==========================
+   SLIC NAV (for mobile)
+   ========================== */
+.slic-nav {
+    flex: 1;
+}
+
+.slic-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.slic-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.slic-nav ul li a:hover,
+.slic-nav ul li a.active {
+    background-color: #4a6ea9;
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+.hero {
+    background: linear-gradient(to bottom right, #3b5878, #1e3a5f);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.hero .cta-buttons {
+    margin-top: 25px;
+}
+
+.cta, .cta-button {
+    background-color: #4da3ff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.cta:hover, .cta-button:hover {
+    background-color: #1f7bd7;
+}
+
+/* ==========================
+   PRODUCT CARDS (DEFAULT FLEX LAYOUT)
+   ========================== */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   PRODUCTS PAGE SPECIFIC (TWO COLUMN LAYOUT)
+   ========================== */
+.products-page .product-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.products-page .product-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 500px;
+}
+
+/* ==========================
+   SALES PAGE / TWO-COLUMN
+   ========================== */
+.sales-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.sales-left,
+.sales-right {
+    flex: 1 1 300px;
+}
+
+/* ==========================
+   QUICK LINKS
+   ========================== */
+.quick-links {
+    background-color: #eef1f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quick-links ul {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.quick-links li {
+    margin: 10px 0;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #1e3a5f;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.quick-links a:hover {
+    opacity: 0.6;
+}
+
+/* ==========================
+   CONTACT / FEEDBACK FORM
+   ========================== */
+.contact-form,
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-form button {
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e3a5f;
+    color: white;
+    margin-top: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ==========================
+   TABLE STYLING
+   ========================== */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px;
+    font-family: 'Inter', sans-serif;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f7fa;
+}
+
+tbody tr:hover {
+    background-color: #e0e7f1;
+}
+
+/* ==========================
+   MEDIA QUERIES
+   ========================== */
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 50px 15px;
+    }
+    nav ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .product-container .product-card {
+        flex: 1 1 100% !important;
+        max-width: 100%;
+    }
+
+    .contact-form .form-row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cta, .cta-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* ==========================
+   CONTAINERS
+   ========================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================
+   VIDEO EMBED
+   ========================== */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .video-container iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-container iframe {
+        height: 200px;
+    }
+}
+
+/* ==========================
+   LOGO AREA
+   ========================== */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   UPCOMING EVENTS — FLEXBOX VERSION
+   ========================== */
+.upcoming-events {
+    padding: 50px 0;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.event-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    font-family: 'Inter', sans-serif;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.event-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
